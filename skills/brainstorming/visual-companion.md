@@ -45,7 +45,7 @@ Save `screen_dir` and `state_dir` from the response. Tell user to open the URL.
 
 **Finding connection info:** The server writes its startup JSON to `$STATE_DIR/server-info`. If you launched the server in the background and didn't capture stdout, read that file to get the URL and port. When using `--project-dir`, check `<project>/.superpowers/brainstorm/` for the session directory.
 
-**Note:** Pass the project root as `--project-dir` so mockups persist in `.superpowers/brainstorm/` and survive server restarts. Without it, files go to `/tmp` and get cleaned up. Remind the user to add `.superpowers/` to `.gitignore` if it's not already there.
+**Note:** Pass the project root as `--project-dir` so mockups persist in `.superpowers/brainstorm/` and survive server restarts. Without it, files go to `/tmp` and get cleaned up. Remind the user to add `.superpowers/brainstorm/` to `.gitignore` if they don't want mockup artifacts committed. (If the project stores specs/plans under `.superpowers/`, don't blanket-ignore the whole `.superpowers/`.)
 
 **Launching the server by platform:**
 
