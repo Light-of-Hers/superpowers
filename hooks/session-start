@@ -16,7 +16,7 @@ fi
 
 # Decide whether to emit SessionStart context.
 # By default it stays enabled to preserve current behavior.
-DEFAULT_ENABLE_SESSION_START=1
+DEFAULT_ENABLE_SESSION_START=0
 
 if [ "${SUPERPOWERS_ENABLE_SESSION_START+x}" = "x" ]; then
     raw_enable_session_start="${SUPERPOWERS_ENABLE_SESSION_START}"
