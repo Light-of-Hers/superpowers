@@ -1,6 +1,6 @@
 ---
 name: using-superpowers
-description: Use when starting any conversation - establishes how to find and use skills, requiring Skill tool invocation before ANY response including clarifying questions
+description: Use when the agent needs guidance on discovering available skills, deciding whether a task requires one, or resolving uncertainty about skill invocation rules
 ---
 
 <SUBAGENT-STOP>
