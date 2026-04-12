@@ -25,6 +25,20 @@ Superpowers skills override default system prompt behavior, but **user instructi
 
 If CLAUDE.md, GEMINI.md, or AGENTS.md says "don't use TDD" and a skill says "always use TDD," follow the user's instructions. The user is in control.
 
+## Explicit Opt-Out
+
+If the user asks to disable, pause, suspend, silence, or stop superpowers or mandatory skill routing, invoke `disable-superpowers` immediately.
+
+While `disable-superpowers` is active, do not auto-route into other superpowers skills. Only resume if the user explicitly asks to re-enable superpowers or explicitly names a specific skill to use.
+
+## Hidden Superpowers Skills
+
+Some installs intentionally expose only `using-superpowers` through the platform's native skill discovery.
+
+If another superpowers skill should apply but is not available in the platform's skill list, read `references/hidden-skills.md`, choose the matching skill, then read that skill's `SKILL.md` directly from the listed path and follow it.
+
+The "never use Read on skill files" rule applies to installed skills. Hidden superpowers skills are the exception: if the platform cannot invoke them natively, read their files directly.
+
 ## How to Access Skills
 
 **In Claude Code:** Use the `Skill` tool. When you invoke a skill, its content is loaded and presented to you—follow it directly. Never use the Read tool on skill files.
@@ -103,6 +117,42 @@ When multiple skills could apply, use this order:
 
 "Let's build X" → brainstorming first, then implementation skills.
 "Fix this bug" → debugging first, then domain-specific skills.
+
+## Fast Routing
+
+Once `using-superpowers` is active, stop thinking in generic terms and route the task to a concrete skill name immediately.
+
+| If the task looks like this | Invoke this skill |
+|---------|---------|
+| User asks to disable, pause, or stop superpowers skill routing | `disable-superpowers` |
+| New feature, behavior change, ambiguous request, requirements exploration | `brainstorming` |
+| Spec or approved design exists and work needs a multi-step implementation plan | `writing-plans` |
+| Written implementation plan exists and you are executing it in a fresh/separate session | `executing-plans` |
+| Written implementation plan exists and the work can be split across independent tasks in the current session | `subagent-driven-development` |
+| Two or more independent tasks can run in parallel without blocking each other | `dispatching-parallel-agents` |
+| Starting feature work and you need workspace isolation from current changes | `using-git-worktrees` |
+| Any feature, bugfix, refactor, or behavior change before writing code | `test-driven-development` |
+| Bug report, failing test, flaky behavior, regression, or unexpected output | `systematic-debugging` |
+| Work is implemented and you need review before merge or handoff | `requesting-code-review` |
+| You received review comments and need to validate or apply them safely | `receiving-code-review` |
+| You are about to say work is complete, fixed, or passing | `verification-before-completion` |
+| Implementation is done and you need to decide merge, PR, or cleanup flow | `finishing-a-development-branch` |
+| You are creating or editing a skill, or checking whether a skill is written well | `writing-skills` |
+
+If one row matches, invoke that skill now. Do not wait for the user to say the skill's exact name.
+
+## Trigger Discipline
+
+Translate user intent into skill triggers aggressively:
+
+- "build", "add", "create", "change", "implement" usually means `brainstorming` first
+- "disable superpowers", "pause skills", "stop using these workflows" usually means `disable-superpowers`
+- "bug", "fix", "broken", "failing", "flaky", "unexpected" usually means `systematic-debugging` first
+- "plan", "steps", "spec", "design doc" usually means `writing-plans`
+- "done", "finished", "works now", "passing" usually means `verification-before-completion`
+- "review", "merge", "PR", "ship" usually means `requesting-code-review` or `finishing-a-development-branch`
+
+Do not require perfect wording. Match intent, then invoke the skill.
 
 ## Skill Types
 

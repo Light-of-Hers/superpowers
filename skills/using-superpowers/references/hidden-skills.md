@@ -1,0 +1,43 @@
+# Hidden Superpowers Skill Catalog
+
+These superpowers skills may exist in the repository even when the current installation intentionally exposes only `using-superpowers` to native skill discovery.
+
+- `brainstorming`
+  - Trigger: New feature, behavior change, ambiguous request, requirements exploration
+  - Read: `../brainstorming/SKILL.md`
+- `dispatching-parallel-agents`
+  - Trigger: Two or more independent tasks can run in parallel without blocking each other
+  - Read: `../dispatching-parallel-agents/SKILL.md`
+- `executing-plans`
+  - Trigger: A written implementation plan is being executed in a fresh or separate session
+  - Read: `../executing-plans/SKILL.md`
+- `finishing-a-development-branch`
+  - Trigger: Implementation is complete and merge, PR, or cleanup flow must be chosen
+  - Read: `../finishing-a-development-branch/SKILL.md`
+- `receiving-code-review`
+  - Trigger: Review feedback must be validated or applied safely
+  - Read: `../receiving-code-review/SKILL.md`
+- `requesting-code-review`
+  - Trigger: Work is implemented and needs review before merge or handoff
+  - Read: `../requesting-code-review/SKILL.md`
+- `subagent-driven-development`
+  - Trigger: A written implementation plan exists and the work can be split across independent tasks in the current session
+  - Read: `../subagent-driven-development/SKILL.md`
+- `systematic-debugging`
+  - Trigger: Bug reports, failing tests, regressions, flaky behavior, or unexpected output
+  - Read: `../systematic-debugging/SKILL.md`
+- `test-driven-development`
+  - Trigger: Any feature, bugfix, refactor, or behavior change before writing code
+  - Read: `../test-driven-development/SKILL.md`
+- `using-git-worktrees`
+  - Trigger: Feature work needs workspace isolation from current changes
+  - Read: `../using-git-worktrees/SKILL.md`
+- `verification-before-completion`
+  - Trigger: You are about to say work is complete, fixed, or passing
+  - Read: `../verification-before-completion/SKILL.md`
+- `writing-plans`
+  - Trigger: A spec or approved design exists and work needs a multi-step implementation plan
+  - Read: `../writing-plans/SKILL.md`
+- `writing-skills`
+  - Trigger: Creating or editing a skill, or checking whether a skill is written well
+  - Read: `../writing-skills/SKILL.md`
