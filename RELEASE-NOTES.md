@@ -1,5 +1,11 @@
 # Superpowers Release Notes
 
+## Unreleased
+
+### OpenCode
+
+- **No `using-superpowers` preload** — the OpenCode plugin now only registers the superpowers skills directory. It no longer injects `using-superpowers` into the first user message at session start; users load skills explicitly with OpenCode's native `skill` tool.
+
 ## v5.0.7 (2026-03-31)
 
 ### GitHub Copilot CLI Support

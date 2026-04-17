@@ -42,12 +42,12 @@ else
     exit 1
 fi
 
-# Test 3: Check using-superpowers skill exists (critical for bootstrap)
-echo "Test 3: Checking using-superpowers skill (required for bootstrap)..."
+# Test 3: Check using-superpowers skill exists for explicit loading
+echo "Test 3: Checking using-superpowers skill is available for explicit loading..."
 if [ -f "$SUPERPOWERS_SKILLS_DIR/using-superpowers/SKILL.md" ]; then
     echo "  [PASS] using-superpowers skill exists"
 else
-    echo "  [FAIL] using-superpowers skill not found (required for bootstrap)"
+    echo "  [FAIL] using-superpowers skill not found"
     exit 1
 fi
 
@@ -60,13 +60,16 @@ else
     exit 1
 fi
 
-# Test 5: Verify bootstrap text does not reference a hardcoded skills path
-echo "Test 5: Checking bootstrap does not advertise a wrong skills path..."
-if grep -q 'configDir}/skills/superpowers/' "$SUPERPOWERS_PLUGIN_FILE"; then
-    echo "  [FAIL] Plugin still references old configDir skills path"
+# Test 5: Verify plugin no longer injects bootstrap preload
+echo "Test 5: Checking plugin does not preload using-superpowers..."
+if grep -q 'experimental.chat.messages.transform' "$SUPERPOWERS_PLUGIN_FILE"; then
+    echo "  [FAIL] Plugin still injects startup message preload"
+    exit 1
+elif grep -q 'ALREADY LOADED' "$SUPERPOWERS_PLUGIN_FILE"; then
+    echo "  [FAIL] Plugin still contains using-superpowers preload text"
     exit 1
 else
-    echo "  [PASS] Plugin does not advertise a misleading skills path"
+    echo "  [PASS] Plugin does not preload using-superpowers"
 fi
 
 # Test 6: Verify personal test skill was created

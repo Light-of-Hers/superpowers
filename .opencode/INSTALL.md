@@ -16,7 +16,11 @@ Add superpowers to the `plugin` array in your `opencode.json` (global or project
 
 Restart OpenCode. That's it — the plugin auto-installs and registers all skills.
 
-Verify by asking: "Tell me about your superpowers"
+Verify with the native `skill` tool:
+
+```
+use skill tool to list skills
+```
 
 ## Migrating from the old symlink-based install
 
@@ -43,6 +47,8 @@ Use OpenCode's native `skill` tool:
 use skill tool to list skills
 use skill tool to load superpowers/brainstorming
 ```
+
+OpenCode does not preload `using-superpowers` at session start. Load skills explicitly when needed.
 
 ## Updating
 
