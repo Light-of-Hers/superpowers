@@ -1,6 +1,6 @@
 ---
 name: using-superpowers
-description: Use when the agent needs guidance on discovering available skills, deciding whether a task requires one, or resolving uncertainty about skill invocation rules
+description: Relevant when the agent needs guidance on discovering available skills, deciding whether a task requires one, or resolving uncertainty about skill invocation rules
 ---
 
 <SUBAGENT-STOP>
