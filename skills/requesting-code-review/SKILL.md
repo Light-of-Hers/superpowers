@@ -1,8 +1,6 @@
 ---
 name: requesting-code-review
-description: Relevant after using-superpowers is active, when completing tasks, implementing major features, or before merging to verify work against requirements
-metadata:
-  superpowers-routing: using-superpowers-or-explicit-request
+description: Relevant only after using-superpowers is active, unless the user explicitly requests this skill by name; use when completing tasks, implementing major features, or before merging to verify work against requirements
 ---
 
 # Requesting Code Review

@@ -1,8 +1,6 @@
 ---
 name: receiving-code-review
-description: Relevant after using-superpowers is active, when receiving code review feedback, especially before implementing suggestions that seem unclear or technically questionable
-metadata:
-  superpowers-routing: using-superpowers-or-explicit-request
+description: Relevant only after using-superpowers is active, unless the user explicitly requests this skill by name; use when receiving code review feedback, especially before implementing suggestions that seem unclear or technically questionable
 ---
 
 # Code Review Reception

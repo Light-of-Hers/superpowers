@@ -1,8 +1,6 @@
 ---
 name: using-git-worktrees
-description: Relevant after using-superpowers is active, when starting feature work that needs isolation from the current workspace or before executing an implementation plan
-metadata:
-  superpowers-routing: using-superpowers-or-explicit-request
+description: Relevant only after using-superpowers is active, unless the user explicitly requests this skill by name; use when starting feature work that needs isolation from the current workspace or before executing an implementation plan
 ---
 
 # Using Git Worktrees

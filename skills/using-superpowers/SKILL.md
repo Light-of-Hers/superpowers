@@ -33,9 +33,9 @@ While `disable-superpowers` is active, do not auto-route into other superpowers 
 
 ## Gated Superpowers Skills
 
-Most superpowers skills declare `metadata.superpowers-routing: using-superpowers-or-explicit-request` and phrase their descriptions as "Relevant after using-superpowers is active, ...".
+Most superpowers skills phrase their descriptions as "Relevant only after using-superpowers is active, unless the user explicitly requests this skill by name; use when ...".
 
-Treat that metadata as a hard routing gate:
+Treat that description text as the routing gate:
 
 - If the user explicitly names the skill, invoke it immediately even if `using-superpowers` is not active.
 - If the user did not explicitly name the skill, you may proactively route into that skill only after `using-superpowers` is already active.

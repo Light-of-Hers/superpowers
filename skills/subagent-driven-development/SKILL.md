@@ -1,8 +1,6 @@
 ---
 name: subagent-driven-development
-description: Relevant after using-superpowers is active, when executing an implementation plan with independent tasks in the current session
-metadata:
-  superpowers-routing: using-superpowers-or-explicit-request
+description: Relevant only after using-superpowers is active, unless the user explicitly requests this skill by name; use when executing an implementation plan with independent tasks in the current session
 ---
 
 # Subagent-Driven Development

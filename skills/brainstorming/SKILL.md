@@ -1,8 +1,6 @@
 ---
 name: brainstorming
-description: Relevant after using-superpowers is active, before creative work such as creating features, building components, adding functionality, or modifying behavior
-metadata:
-  superpowers-routing: using-superpowers-or-explicit-request
+description: Relevant only after using-superpowers is active, unless the user explicitly requests this skill by name; use before creative work such as creating features, building components, adding functionality, or modifying behavior
 ---
 
 # Brainstorming Ideas Into Designs

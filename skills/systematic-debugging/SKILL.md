@@ -1,8 +1,6 @@
 ---
 name: systematic-debugging
-description: Relevant after using-superpowers is active, when encountering a bug, test failure, or other unexpected behavior, before proposing fixes
-metadata:
-  superpowers-routing: using-superpowers-or-explicit-request
+description: Relevant only after using-superpowers is active, unless the user explicitly requests this skill by name; use when encountering a bug, test failure, or other unexpected behavior, before proposing fixes
 ---
 
 # Systematic Debugging

@@ -1,8 +1,6 @@
 ---
 name: test-driven-development
-description: Relevant after using-superpowers is active, when implementing a feature or bugfix, before writing implementation code
-metadata:
-  superpowers-routing: using-superpowers-or-explicit-request
+description: Relevant only after using-superpowers is active, unless the user explicitly requests this skill by name; use when implementing a feature or bugfix, before writing implementation code
 ---
 
 # Test-Driven Development (TDD)

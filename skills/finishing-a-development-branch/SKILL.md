@@ -1,8 +1,6 @@
 ---
 name: finishing-a-development-branch
-description: Relevant after using-superpowers is active, when implementation is complete, tests pass, and you need to decide how to integrate or clean up the branch
-metadata:
-  superpowers-routing: using-superpowers-or-explicit-request
+description: Relevant only after using-superpowers is active, unless the user explicitly requests this skill by name; use when implementation is complete, tests pass, and you need to decide how to integrate or clean up the branch
 ---
 
 # Finishing a Development Branch

@@ -57,7 +57,7 @@ Codex has native skill discovery — it scans `~/.agents/skills/` at startup, pa
 
 The `using-superpowers` skill is discovered automatically and enforces skill usage discipline — no additional configuration needed.
 
-Other superpowers skills can declare `metadata.superpowers-routing: using-superpowers-or-explicit-request` and phrase their descriptions as "Relevant after using-superpowers is active, ...". Treat that combination as a routing gate: the user can still request those skills by name at any time, but the agent should only auto-route into them after `using-superpowers` is active.
+Other superpowers skills phrase their descriptions as "Relevant only after using-superpowers is active, unless the user explicitly requests this skill by name; use when ...". Treat that description text as a routing gate: the user can still request those skills by name at any time, but the agent should only auto-route into them after `using-superpowers` is active.
 
 ## Usage
 
@@ -66,7 +66,7 @@ Skills are discovered automatically. Codex activates them when:
 - The task matches a skill's description
 - The `using-superpowers` skill directs Codex to use one
 
-For superpowers skills with the routing-gate metadata above, only the explicit-name path and the `using-superpowers`-directed path should be used.
+For superpowers skills with that gated description pattern, only the explicit-name path and the `using-superpowers`-directed path should be used.
 
 ### Personal Skills
 
