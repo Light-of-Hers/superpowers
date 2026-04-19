@@ -1,6 +1,8 @@
 ---
 name: receiving-code-review
-description: Relevant when receiving code review feedback, especially before implementing suggestions that seem unclear or technically questionable
+description: Relevant after using-superpowers is active, when receiving code review feedback, especially before implementing suggestions that seem unclear or technically questionable
+metadata:
+  superpowers-routing: using-superpowers-or-explicit-request
 ---
 
 # Code Review Reception

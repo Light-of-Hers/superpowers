@@ -31,6 +31,16 @@ If the user asks to disable, pause, suspend, silence, or stop superpowers or man
 
 While `disable-superpowers` is active, do not auto-route into other superpowers skills. Only resume if the user explicitly asks to re-enable superpowers or explicitly names a specific skill to use.
 
+## Gated Superpowers Skills
+
+Most superpowers skills declare `metadata.superpowers-routing: using-superpowers-or-explicit-request` and phrase their descriptions as "Relevant after using-superpowers is active, ...".
+
+Treat that metadata as a hard routing gate:
+
+- If the user explicitly names the skill, invoke it immediately even if `using-superpowers` is not active.
+- If the user did not explicitly name the skill, you may proactively route into that skill only after `using-superpowers` is already active.
+- Without `using-superpowers` or an explicit skill request, do not auto-invoke gated superpowers skills based only on their descriptions.
+
 ## Hidden Superpowers Skills
 
 Some installs intentionally expose only `using-superpowers` through the platform's native skill discovery.

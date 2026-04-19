@@ -1,6 +1,8 @@
 ---
 name: finishing-a-development-branch
-description: Relevant when implementation is complete, tests pass, and you need to decide how to integrate or clean up the branch
+description: Relevant after using-superpowers is active, when implementation is complete, tests pass, and you need to decide how to integrate or clean up the branch
+metadata:
+  superpowers-routing: using-superpowers-or-explicit-request
 ---
 
 # Finishing a Development Branch

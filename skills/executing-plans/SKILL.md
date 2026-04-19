@@ -1,6 +1,8 @@
 ---
 name: executing-plans
-description: Relevant when you have a written implementation plan to execute in a separate session
+description: Relevant after using-superpowers is active, when you have a written implementation plan to execute in a separate session
+metadata:
+  superpowers-routing: using-superpowers-or-explicit-request
 ---
 
 # Executing Plans

@@ -1,6 +1,8 @@
 ---
 name: dispatching-parallel-agents
-description: Relevant when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies
+description: Relevant after using-superpowers is active, when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies
+metadata:
+  superpowers-routing: using-superpowers-or-explicit-request
 ---
 
 # Dispatching Parallel Agents

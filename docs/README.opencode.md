@@ -98,6 +98,8 @@ The plugin registers the superpowers skills directory via the `config` hook, so 
 
 OpenCode does not preload `using-superpowers` at session start. Load any skill explicitly through the native `skill` tool when needed.
 
+Some superpowers skills declare `metadata.superpowers-routing: using-superpowers-or-explicit-request` and phrase their descriptions as "Relevant after using-superpowers is active, ...". That means explicit skill loads are always allowed, but autonomous routing into those skills should only happen after `using-superpowers` is already active.
+
 ### Tool Mapping
 
 Skills written for Claude Code are automatically adapted for OpenCode:

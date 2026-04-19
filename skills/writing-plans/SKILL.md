@@ -1,6 +1,8 @@
 ---
 name: writing-plans
-description: Relevant when you have a spec or requirements for a multi-step task, before touching code
+description: Relevant after using-superpowers is active, when you have a spec or requirements for a multi-step task, before touching code
+metadata:
+  superpowers-routing: using-superpowers-or-explicit-request
 ---
 
 # Writing Plans

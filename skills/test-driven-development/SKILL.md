@@ -1,6 +1,8 @@
 ---
 name: test-driven-development
-description: Relevant when implementing a feature or bugfix, before writing implementation code
+description: Relevant after using-superpowers is active, when implementing a feature or bugfix, before writing implementation code
+metadata:
+  superpowers-routing: using-superpowers-or-explicit-request
 ---
 
 # Test-Driven Development (TDD)

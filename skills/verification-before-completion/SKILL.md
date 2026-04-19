@@ -1,6 +1,8 @@
 ---
 name: verification-before-completion
-description: Relevant when about to claim work is complete, fixed, or passing, especially before committing or creating PRs
+description: Relevant after using-superpowers is active, when about to claim work is complete, fixed, or passing, especially before committing or creating PRs
+metadata:
+  superpowers-routing: using-superpowers-or-explicit-request
 ---
 
 # Verification Before Completion

@@ -1,6 +1,8 @@
 ---
 name: writing-skills
-description: Relevant when creating new skills, editing existing skills, or verifying that skills work before deployment
+description: Relevant after using-superpowers is active, when creating new skills, editing existing skills, or verifying that skills work before deployment
+metadata:
+  superpowers-routing: using-superpowers-or-explicit-request
 ---
 
 # Writing Skills
